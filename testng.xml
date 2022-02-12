@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" verbose="1" thread-count="1">
+
+  <test  name="TestInChrome" preserve-order="true" annotations="JDK">
+    <parameter name ="Platform" value="Windows 10"/>
+    <parameter name ="BrowserName" value="Chrome"/>
+    <parameter name ="Version" value="86.0"/>  
+    <classes>
+      <class name="testScripts.TestCase"/>
+    </classes>
+  </test> 
+  
+  <test name="TestInMicrosoftEdge" preserve-order="true" annotations="JDK">
+	<parameter name ="Platform" value="macOS Sierra"/>
+    <parameter name ="BrowserName" value="MicrosoftEdge"/>
+    <parameter name ="Version" value="87.0"/>	
+    <classes>
+      <class name="testScripts.TestCase"/>
+    </classes>
+  </test>
+</suite>
